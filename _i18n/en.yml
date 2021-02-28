@@ -20,4 +20,5 @@ state:
   state_hotline_label: "State hotline: "
   submit_correction_link: "Submit a correction"
 footer:
+  privacy_policy_link: "Privacy Policy"
   share_feedback: "Share your feedback"
