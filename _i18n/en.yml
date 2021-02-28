@@ -22,3 +22,6 @@ state:
 footer:
   privacy_policy_link: "Privacy Policy"
   share_feedback: "Share your feedback"
+not_found:
+  page_title: "404 - Page Not Found"
+  page_subheading: "The requested page could not be found."
