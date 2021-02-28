@@ -2,9 +2,9 @@
   <div class="container splash-container">
     <div class="left">
       <div class="intro-text">
-        <h1 class="header">{{ site.data.sitetext.header.title | markdownify }}</h1>
+        <h1 class="header">{{ t header.title | markdownify }}</h1>
         <hr />
-        <div class="dropdown-label">{{ site.data.sitetext.header.text | markdownify }}</div>
+        <div class="dropdown-label">{{ t header.text | markdownify }}</div>
         <select class="custom-select" name="state" id="state" onchange="location = this.value;">
           <option disabled selected value="">{% t splash.state %}</option>
           {% for state in site.states %}
