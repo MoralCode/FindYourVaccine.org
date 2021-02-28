@@ -9,9 +9,9 @@
       </span>
       {% if page.counties %}
         <br /><br />
-        View county-specific information, where available:<br />
+        {% t state.county_information_label %}<br />
         <select name="county" id="county" onchange="toggleCounty(this);">
-          <option disabled selected value="">Select your county...</option>
+          <option disabled selected value="">{% t state.select_county %}</option>
         </select>
         <div class="card card-med mx-auto" id="county-holder">
           <div class="card-body" id="county-details"></div>
@@ -29,12 +29,12 @@
       <center>
       {% if page.lat %}
         <a href="#providers">
-          <button class="btn btn-primary">View provider availability in {{ page.name }}</button>
+          <button class="btn btn-primary">{% t state.provider_eligibility_in %}</button>
         </a>
       {% else %}
         <div id="hold-providers-link" class="invisible">
           <br />
-          For a current list of vaccine providers, visit:<br />
+          {% t state.provider_list_cta %}<br />
           <span id="providers-link"></span>
         </div>
       {% endif %}

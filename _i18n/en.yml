@@ -5,9 +5,12 @@ map:
 splash:
   state: Select your state...
 state:
+  county_information_label: "View county-specific information, where available:"
+  select_county: "Select your county..."
   state_updates: "For the latest official updates from your state, visit:"
   locate_provider_link: "Find a provider near me"
   provider_list_cta: "For a current list of vaccine providers, visit:"
+  provider_eligibility_in: "View provider availability in {{ page.name }}"
   last_updated: "Last updated: "
   eligibility_question_header: "Am I eligible?"
   eligible_groups_intro: "You are currently eligible if you belong to any of the following groups:"
