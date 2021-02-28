@@ -33,13 +33,6 @@ contact:
 footer:
   share_feedback: "Share your feedback"
   legal: "Privacy Policy"
-  social:
-    - url: https://twitter.com/findyourvaccine
-      icon: "fab fa-twitter"
-    - url: https://discord.gg/vFe5zPjJr8
-      icon: fab fa-discord
-    - url: https://github.com/findyourvaccine/FindYourVaccine.org
-      icon: "fab fa-github"
 not_found:
   page_title: "404 - Page Not Found"
   page_subheading: "The requested page could not be found."
