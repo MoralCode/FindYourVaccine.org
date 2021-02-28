@@ -3,5 +3,21 @@ splash:
   state: Select your state...
 state:
   state_updates: "For the latest official updates from your state, visit:"
+  locate_provider_link: "Find a provider near me"
+  provider_list_cta: "For a current list of vaccine providers, visit:"
+  last_updated: "Last updated: "
+  eligibility_question_header: "Am I eligible?"
+  eligible_groups_intro: "You are currently eligible if you belong to any of the following groups:"
+  eligible_vaccine_aquisition_header: "I'm eligible. How do I get the vaccine?"
+  eligible_notes: "Notes: "
+  eligibility_table_group_heading: "Group"
+  eligibility_table_instructions_heading: "Instructions"
+  ineligible_vaccine_aquisition_header: "I'm not eligible yet. When can I get the vaccine?"
+  ineligible_notes: "Notes: "
+  ineligibility_table_group_heading: "Group"
+  ineligibility_table_timeline_heading: "Timeline"
+  additional_resources_label: "Additional resources:"
+  state_hotline_label: "State hotline: "
+  submit_correction_link: "Submit a correction"
 footer:
   share_feedback: "Share your feedback"
