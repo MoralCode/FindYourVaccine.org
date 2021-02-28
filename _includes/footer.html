@@ -10,12 +10,12 @@
         <a href="/volunteer">Volunteer with us</a>
       </div>
       <div class="footer-item">
-        <a href="/legal">Privacy policy</a>
+        <a href="/legal">{{ t footer.legal | default: "Privacy Policy" }}</a>
       </div>
     </div>
     <div class="items">
       <div class="footer-title">Connect</div>
-      {% for link in site.data.sitetext.footer.social %}
+      {% for link in site.footer.social %}
       <div class="footer-item">
         {% if link.url %}
         <a href="{{ link.url }}">
