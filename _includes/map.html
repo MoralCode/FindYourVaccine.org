@@ -1,25 +1,85 @@
-<div id="map">
-  <nav id='filters' class='filter-ui'>
-    <strong class='filter-header'>{% t map.filter %}</strong>
-  </nav>
+<div id="providers-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="cards-and-search" class="col-5">
+        <div class="row justify-content-center">
+          <div id="map-search"></div>
+          <button id="locate-provider" class="btn btn-primary">
+            <i style="font-size:14px" class="material-icons">my_location</i> Use my location
+          </button>
+        </div>
+        <div id="map-toggle-header">Results sorted by availability &#8226; 
+          <strong><a id="map-toggle" href="#">Show map</a></strong>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12" id="mobile-map-holder"></div>
+          </div>
+          <div class="row">
+            <div class="col-12" id="mobile-filters-holder"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="provider-cards" class="cards-container col-sm-12"></div>
+        </div>
+      </div>
+      <div id="wide-map-holder" class="col-7">
+        <div id="map-and-filters">
+          <div id="map-filter-holder">
+            <div id="filters" class="filter-ui">
+              <div class="key-container">
+                <span class="dot" style="background-color: #1a9641"></span>
+                <label class="filter-label" for="status-available">Vaccine available</label>
+                <div class="switch-container">
+                  <input type="checkbox" class="map-filter-checkbox" netliva-switch id="status-available" checked />
+                </div>
+              </div>
+              <div class="key-container">
+                <span class="dot" style="background-color: #fdae61"></span>
+                <label class="filter-label" for="status-no-appt">Limited availability</label>
+                <div class="switch-container">
+                  <input type="checkbox" class="map-filter-checkbox" netliva-switch id="status-no-appt" checked />
+                </div>
+              </div>
+              <div class="key-container">
+                <span class="dot" style="background-color: #d7191c"></span>
+                <label class="filter-label" for="status-no">Vaccine unavailable</label>
+                <div class="switch-container">
+                  <input type="checkbox" class="map-filter-checkbox" netliva-switch id="status-no" checked />
+                </div>
+              </div>
+              <div class="key-container">
+                <span class="dot" style="background-color: #333333"></span>
+                <label class="filter-label" for="status-unknown">No data available</label>
+                <div class="switch-container">
+                  <input type="checkbox" class="map-filter-checkbox" netliva-switch id="status-unknown" checked />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
   // find near me
-  document.querySelector('#locate-provider').addEventListener('click', geolocate);
+  document.querySelector("#locate-provider").addEventListener("click", geolocate);
   function geolocate(e) {
-    $(e.target).css('background-color','white');
-    $(e.target).html("<img src='assets/img/spinner.svg' />")
+    $(e.target).css("background-color", "white");
+    $(e.target).html("<img src='assets/img/spinner.svg' />");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(jumpToMap);
     }
   }
 
   function jumpToMap(position) {
-    $('html,body').animate({scrollTop: $("a[name='providers']").offset().top},'slow');
+    $("html,body").animate({ scrollTop: $("a[name='providers']").offset().top }, "slow");
     map.flyTo({
       center: [position.coords.longitude, position.coords.latitude],
-      zoom: 10 }
-    );
+      zoom: 10,
+    });
   }
 </script>

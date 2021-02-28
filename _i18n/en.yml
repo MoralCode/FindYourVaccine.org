@@ -1,6 +1,7 @@
 map:
-  filter: "Filter providers by status:"
 splash:
   state: Select your state...
 state:
   state_updates: "For the latest official updates from your state, visit:"
+footer:
+  share_feedback: "Share your feedback"
